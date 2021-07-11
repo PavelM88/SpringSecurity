@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:method="POST" th:action="@{/admin/add}" th:object="${user}">
+        <label for="name">Enter name</label>
+        <input type="text" th:field="*{name}" id="name"/>
+        <br/>
+        <label for="lastName">Enter lastName</label>
+        <input type="text" th:field="*{lastName}" id="lastName">
+        <br/>
+        <label for="age">Enter age</label>
+        <input type="text" th:field="*{age}" id="age">
+        <br/>
+        <label for="username">Enter username</label>
+        <input type="text" th:field="*{userName}" id="username"/>
+        <br/>
+        <label for="password">Enter password</label>
+        <input type="text" th:field="*{password}" id="password"/>
+        <br/>
+        <label for="passwordConfirm">Enter password confirm</label>
+        <input type="text" th:field="*{passwordConfirm}" id="passwordConfirm">
+        <br/>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
